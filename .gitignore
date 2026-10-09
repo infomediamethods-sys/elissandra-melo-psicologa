@@ -19,3 +19,5 @@ assets/img/_orig/
 
 # Fontes do build (partes .part + build.py)
 _src/
+# Marcador de aprovação do Armin (lido pelo publicador automático do Mac)
+APROVADO*
