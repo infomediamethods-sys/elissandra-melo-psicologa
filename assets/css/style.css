@@ -342,30 +342,29 @@ p .link, li .link { min-height: var(--toque-min); }
   0%, 100% { transform: translateY(-2px) scale(1); opacity: 1; }
   50% { transform: translateY(-2px) scale(1.8); opacity: .45; }
 }
-.heroi__pergunta {
-  font-family: var(--font-display); font-weight: 400;
-  font-variation-settings: "opsz" 72;
-  font-size: clamp(1.25rem, 2.2vw, 1.75rem); line-height: 1.25;
-  color: var(--texto);
-  text-wrap: balance;
-  margin-block-end: calc(-1 * var(--space-2));
-}
-.heroi__frase {
-  display: block;
-  min-height: 0;
-  padding: 0; border: 0; background: none;
-  text-align: left;
+.heroi__titulo {
   font-family: var(--font-display); font-weight: 300; font-style: italic;
   font-variation-settings: "opsz" 72;
-  font-size: clamp(2.125rem, 5.4vw, 4.875rem);
-  line-height: 1;
+  font-size: clamp(2rem, 4.2vw, 3.75rem);
+  line-height: 1.05;
   letter-spacing: -0.03em;
   color: var(--terracota);
   text-wrap: balance;
-  transition: opacity .5s ease, transform .5s ease;
 }
-.heroi__frase:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 8px; }
-.heroi__frase.trocando { opacity: 0; transform: translateY(8px); }
+.heroi__frases[role="list"] { display: flex; flex-wrap: wrap; gap: var(--space-2); padding: 0; }
+.heroi__opcao {
+  min-height: 44px;
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--fio);
+  border-radius: var(--raio-m);
+  background: var(--creme);
+  text-align: left;
+  font-family: var(--font-display); font-style: italic; font-weight: 400;
+  font-size: 1rem; line-height: 1.3;
+  color: var(--espresso);
+  transition: background-color .2s ease, border-color .2s ease;
+}
+.heroi__opcao:hover { border-color: var(--texto-suave); background: var(--tom-1); }
 .anotacao {
   display: inline-flex; align-items: flex-start; gap: var(--space-2);
   font-family: var(--font-display); font-style: italic; font-size: 1.125rem; line-height: 1.35;
@@ -938,7 +937,7 @@ html:not(.js) .acordeao details[open] .acordeao__botao .icone,
 @media (prefers-reduced-motion: reduce) {
   .foto-card:hover, .foto-card:hover .foto-card__midia img,
   .cabecalho__menu:hover .icone, .cabecalho__menu[aria-expanded="true"] .icone,
-  .menu-celular__fechar .icone, .heroi__frase.trocando { transform: none; }
+  .menu-celular__fechar .icone { transform: none; }
   .ponto-pulso { animation: none; transform: translateY(-2px); }
 }
 

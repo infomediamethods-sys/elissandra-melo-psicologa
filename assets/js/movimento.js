@@ -71,19 +71,14 @@
     frases.forEach(function (b) { b.addEventListener('click', function () { escolher(b, true); }); });
   }
 
-  /* 3. Frase do herói: sorteada a cada carregamento entre as curtas do mural; clicar leva ao mural */
-  var heroiFrase = document.querySelector('[data-frase-heroi]');
-  if (heroiFrase && frases.length) {
-    var opcoes = ['1', '3', '4', '5', '9', '13']; /* temas variados: a frase do topo não pode falar só com quem tem ansiedade */
-    var id = opcoes[Math.floor(Math.random() * opcoes.length)];
-    var origem = document.querySelector('.frase[data-frase="' + id + '"]');
-    if (origem) { heroiFrase.textContent = origem.textContent; heroiFrase.dataset.fraseHeroi = id; }
-    heroiFrase.addEventListener('click', function () {
-      var alvo = document.querySelector('.frase[data-frase="' + heroiFrase.dataset.fraseHeroi + '"]');
+  /* 3. Herói: pergunta geral + 4 frases de temas diferentes; tocar numa leva ao mural já com a resposta */
+  document.querySelectorAll('[data-frase-heroi]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var alvo = document.querySelector('.frase[data-frase="' + b.dataset.fraseHeroi + '"]');
       rolarPara(document.getElementById('sinto'));
       if (alvo) escolher(alvo, false);
     });
-  }
+  });
 
   /* 4. Acordeão: <details> funciona sem JS; com JS a resposta abre/fecha animada */
   document.querySelectorAll('.acordeao details').forEach(function (d) {
