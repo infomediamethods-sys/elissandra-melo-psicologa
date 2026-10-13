@@ -470,18 +470,20 @@ p .link, li .link { min-height: var(--toque-min); }
   .sobre__grade { grid-template-columns: minmax(0, 7fr) minmax(0, 534px); gap: var(--space-8); }
 }
 
-/* ---------- 4. Temas: grade de fios ---------- */
+/* ---------- 4. Temas: cartões separados e arredondados (13/10/2026, pedido do Armin: "como no resto do site";
+   antes era grade de fios colados). Raio, fundo e fio iguais aos cartões/frases do site. ---------- */
 .grade-fios {
   display: grid; grid-template-columns: minmax(0, 1fr);
-  border-top: 1px solid var(--fio); border-left: 1px solid var(--fio);
+  gap: var(--space-4);
 }
 .celula {
   position: relative;
   display: grid; align-content: start; gap: var(--space-2);
   padding: var(--space-6) var(--space-5);
   background: var(--branco);
-  border-right: 1px solid var(--fio); border-bottom: 1px solid var(--fio);
-  transition: background-color .2s ease, color .2s ease;
+  border: 1px solid var(--fio);
+  border-radius: var(--raio-m);
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease;
 }
 .celula__num { font-size: 0.75rem; letter-spacing: 0.08em; color: var(--texto-suave); transition: color .2s ease; }
 .celula .icone-circulo {
@@ -497,7 +499,7 @@ p .link, li .link { min-height: var(--toque-min); }
 .celula > p:not(.chips) { font-size: 1rem; line-height: 1.6; }
 .celula .chips { margin-block-start: var(--space-3); }
 @media (hover: hover) {
-  .celula:hover { background: var(--espresso); color: var(--creme); }
+  .celula:hover { background: var(--espresso); border-color: var(--espresso); color: var(--creme); }
   .celula:hover h3 { color: var(--creme); }
   .celula:hover .celula__num { color: var(--creme-suave); }
   .celula:hover .icone-circulo { opacity: 0; }
@@ -505,7 +507,7 @@ p .link, li .link { min-height: var(--toque-min); }
   .celula:hover .chip:hover { background: var(--creme); color: var(--espresso); border-color: var(--creme); }
 }
 @media (min-width: 900px) {
-  .grade-fios { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grade-fios { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-5); }
   .celula h3 { margin-block-start: var(--space-7); }
   .celula > p:not(.chips) { font-size: 0.9375rem; }
 }
