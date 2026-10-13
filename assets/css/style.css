@@ -366,6 +366,11 @@ p .link, li .link { min-height: var(--toque-min); }
   transition: background-color .2s ease, border-color .2s ease;
 }
 .heroi__opcao:hover { border-color: var(--texto-suave); background: var(--tom-1); }
+/* Celular/tablet: com as 4 frases, o apoio (já dito no rótulo e nos selos) sai para o botão e o CRP caberem na 1ª tela */
+@media (max-width: 899px) {
+  .heroi__opcao { font-size: 0.9375rem; }
+  .heroi__apoio { display: none; }
+}
 .anotacao {
   display: inline-flex; align-items: flex-start; gap: var(--space-2);
   font-family: var(--font-display); font-style: italic; font-size: 1.125rem; line-height: 1.35;
