@@ -342,6 +342,7 @@ p .link, li .link { min-height: var(--toque-min); }
   0%, 100% { transform: translateY(-2px) scale(1); opacity: 1; }
   50% { transform: translateY(-2px) scale(1.8); opacity: .45; }
 }
+/* Herói: pergunta geral + 4 frases que levam ao mural (revisão do Armin, 13/10/2026) */
 .heroi__titulo {
   font-family: var(--font-display); font-weight: 300; font-style: italic;
   font-variation-settings: "opsz" 72;
