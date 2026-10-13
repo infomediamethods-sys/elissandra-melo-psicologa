@@ -449,7 +449,8 @@ p .link, li .link { min-height: var(--toque-min); }
 }
 
 /* ---------- 3. Sobre ---------- */
-.sobre { background: var(--tom-1); padding-block-start: var(--space-7); }
+/* Sem a faixa de frase (removida 13/10/2026), o Sobre volta ao respiro padrão de seção (--section-y) no topo */
+.sobre { background: var(--tom-1); }
 .sobre__grade { display: grid; gap: var(--space-7); }
 .sobre__texto { display: grid; justify-items: start; gap: var(--space-5); }
 .sobre__midia {
