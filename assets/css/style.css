@@ -162,12 +162,15 @@ p .link, li .link { min-height: var(--toque-min); }
   display: flex; align-items: center;
   transition: transform .3s ease;
 }
+/* Navbar com cor própria desde o topo (13/10/2026, pedido do Armin: "leve, sutil, da paleta"):
+   --tom-1 (#F6EDE2) translúcido + fio de 1px embaixo. Antes ficava transparente até rolar. */
 .cabecalho::before {
   content: ""; position: absolute; inset: 0; z-index: -1;
-  background: rgba(251, 246, 238, .92);
+  background: rgba(246, 237, 226, .9);
+  border-bottom: 1px solid rgba(224, 214, 202, .8);
   -webkit-backdrop-filter: blur(16px) saturate(1.2);
   backdrop-filter: blur(16px) saturate(1.2);
-  opacity: 0;
+  opacity: 1;
   transition: opacity .3s ease;
 }
 /* Encolher só com transform: a caixa mantém a altura alta, sobe (alto − baixo) e a barra desce metade disso,
