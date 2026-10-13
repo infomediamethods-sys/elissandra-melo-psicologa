@@ -460,6 +460,16 @@ p .link, li .link { min-height: var(--toque-min); }
   margin-inline: 0;
 }
 .sobre__midia img { object-position: 50% 30%; }
+/* Celular/tablet (13/10/2026, pedido do Armin): a foto entra logo abaixo do título.
+   O bloco de texto "se abre" na grade (display: contents) para a foto ficar entre o título e o texto.
+   Ritmo: rótulo+título → foto 32 · foto → texto 32 · entre parágrafos/identificação/link 24 (o mesmo de antes). */
+@media (max-width: 899px) {
+  .sobre__grade { gap: var(--space-5); justify-items: start; }
+  .sobre__texto { display: contents; }
+  .sobre__texto > * { order: 2; }
+  .sobre__texto > .cabeca__titulo { order: 0; }
+  .sobre__midia { order: 1; margin-block: var(--space-2); }
+}
 @media (min-width: 900px) {
   .sobre__grade {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -798,7 +808,7 @@ html:not(.js) .acordeao details[open] .acordeao__botao .icone,
 .acordeao details.aberto .acordeao__botao .icone { transform: rotate(45deg); }
 @media (min-width: 900px) {
   .duvidas__grade { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-8); align-items: start; }
-  .duvidas__cabeca { position: sticky; top: calc(var(--cabecalho-baixo) + var(--space-6)); }
+  /* sem sticky: regra do Armin (13/10/2026), nenhum título acompanha a rolagem no computador */
   .acordeao summary { font-size: 1.625rem; padding-block: var(--space-5); }
 }
 
