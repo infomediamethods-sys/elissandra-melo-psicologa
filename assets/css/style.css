@@ -322,11 +322,13 @@ p .link, li .link { min-height: var(--toque-min); }
   padding-block: calc(var(--cabecalho-alto) + var(--space-5)) var(--space-7);
 }
 /* Ritmo do herói (13/10/2026): o espaço cresce com a separação de ideia.
-   Celular: rótulo→título 24 · título→frases 24 · entre frases 12 · frases→anotação 16 · anotação→botões 32 ·
-   texto→foto 48 · foto→CRP 16. Computador: rótulo→título 48 · título→frases 32 · anotação→apoio 32 · apoio→botões 32. */
-.heroi__grade { display: grid; gap: var(--space-7); margin-block-start: var(--space-5); }
+   2ª volta (mais ar, pedido do Armin): tudo subiu um degrau da escala.
+   Celular: rótulo→título 32 · título→frases 32 · entre frases 16 · frases→anotação 24 · anotação→botões 48 ·
+   texto→foto 64 · foto→CRP 24. Computador: rótulo→título 64 · título→frases 48 · entre frases 16 ·
+   anotação→apoio 48 · apoio→botões 48 · foto→CRP 24. */
+.heroi__grade { display: grid; gap: var(--space-8); margin-block-start: var(--space-6); }
 .heroi__texto { display: grid; justify-items: start; gap: 0; }
-.heroi__lado { display: grid; gap: var(--space-4); }
+.heroi__lado { display: grid; gap: var(--space-5); }
 .heroi__rotulo {
   display: flex; align-items: baseline; gap: var(--space-3);
   font-family: var(--font-texto); font-variation-settings: normal;
@@ -356,8 +358,8 @@ p .link, li .link { min-height: var(--toque-min); }
   color: var(--terracota);
   text-wrap: balance;
 }
-.heroi__frases[role="list"] { display: flex; flex-wrap: wrap; gap: var(--space-3); padding: 0; margin-block-start: var(--space-5); }
-.heroi .anotacao { margin-block-start: var(--space-4); }
+.heroi__frases[role="list"] { display: flex; flex-wrap: wrap; gap: var(--space-4); padding: 0; margin-block-start: var(--space-6); }
+.heroi .anotacao { margin-block-start: var(--space-5); }
 .heroi__opcao {
   min-height: 44px;
   padding: var(--space-2) var(--space-4);
@@ -383,8 +385,8 @@ p .link, li .link { min-height: var(--toque-min); }
 }
 .anotacao span { text-wrap: pretty; }
 .anotacao .icone { color: var(--terracota); margin-block-start: var(--space-1); }
-.heroi__apoio { max-width: 30em; margin-block-start: var(--space-6); }
-.heroi .acoes { margin-block-start: var(--space-6); row-gap: var(--space-4); }
+.heroi__apoio { max-width: 30em; margin-block-start: var(--space-7); }
+.heroi .acoes { margin-block-start: var(--space-7); row-gap: var(--space-5); }
 .heroi__midia {
   aspect-ratio: auto; width: 100%;
   height: clamp(200px, 30svh, 260px);
@@ -410,8 +412,8 @@ p .link, li .link { min-height: var(--toque-min); }
     align-items: center;
   }
   .heroi__rotulo { font-size: 0.875rem; }
-  .heroi__grade { margin-block-start: var(--space-7); }
-  .heroi__frases[role="list"] { margin-block-start: var(--space-6); }
+  .heroi__grade { margin-block-start: var(--space-8); }
+  .heroi__frases[role="list"] { margin-block-start: var(--space-7); }
   .heroi__midia {
     height: auto;
     aspect-ratio: 1110 / 1200;
