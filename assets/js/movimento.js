@@ -74,7 +74,7 @@
   /* 3. Frase do herói: sorteada a cada carregamento entre as curtas do mural; clicar leva ao mural */
   var heroiFrase = document.querySelector('[data-frase-heroi]');
   if (heroiFrase && frases.length) {
-    var opcoes = ['1', '3', '4', '7', '16'];
+    var opcoes = ['1', '3', '4', '5', '9', '13']; /* temas variados: a frase do topo não pode falar só com quem tem ansiedade */
     var id = opcoes[Math.floor(Math.random() * opcoes.length)];
     var origem = document.querySelector('.frase[data-frase="' + id + '"]');
     if (origem) { heroiFrase.textContent = origem.textContent; heroiFrase.dataset.fraseHeroi = id; }
