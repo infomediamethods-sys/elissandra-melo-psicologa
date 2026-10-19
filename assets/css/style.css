@@ -226,7 +226,7 @@ p .link, li .link { min-height: var(--toque-min); }
     text-decoration: none; white-space: nowrap;
     background-image: linear-gradient(currentColor, currentColor);
     background-size: 0 1px; background-repeat: no-repeat; background-position: 0 calc(100% - 10px);
-    transition: background-size .25s ease;
+    transition: none;
   }
   .cabecalho__nav a:hover { background-size: 100% 1px; }
   .cabecalho__cta { display: inline-flex; flex-shrink: 0; }
@@ -813,7 +813,7 @@ p .link, li .link { min-height: var(--toque-min); }
 }
 .acordeao__botao .icone { transition: transform .3s ease; }
 .acordeao summary:hover .acordeao__botao { border-color: var(--terracota); }
-.acordeao__resposta { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .4s ease; }
+.acordeao__resposta { display: grid; grid-template-rows: 0fr; transition: none; }
 .acordeao__resposta > div { overflow: hidden; min-height: 0; }
 .acordeao__resposta p { max-width: 34em; font-size: 1rem; }
 .acordeao__resposta p + p { margin-block-start: var(--space-2); }
@@ -988,3 +988,9 @@ html:not(.js) .acordeao details[open] .acordeao__botao .icone,
 /* Com Lenis ativo, o deslocamento do cabeçalho já vem do offset do Lenis (main.js); sem isto o scroll-margin do
    base.css somava de novo e a âncora parava ~100px abaixo do cabeçalho. Sem Lenis (reduce), vale o do base.css. */
 html.lenis [id] { scroll-margin-top: 0; }
+
+
+/* Regra do Armin, 19/10/2026 (§0 "Rolagem leve no celular"): sem vidro desfocado no celular; fundo quase opaco. Aplicado por aplicar-carregamento.mjs. */
+@media (max-width: 899px) {
+  .cabecalho::before { -webkit-backdrop-filter: none; backdrop-filter: none; background: rgba(246, 237, 226, 0.96); }
+}

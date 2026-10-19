@@ -17,11 +17,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,72,300;1,72,300;1,72,400&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" media="(max-width: 899px)" imagesrcset="assets/img/heroi-natureza-celular-480.webp 480w, assets/img/heroi-natureza-celular-960.webp 960w" imagesizes="100vw">
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/style.css">
-
-<link rel="preload" as="image" href="assets/img/heroi-natureza-celular.webp" type="image/webp" media="(max-width: 899px)">
-<link rel="preload" as="image" href="assets/img/heroi-natureza.webp" type="image/webp" media="(min-width: 900px)">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -130,11 +128,10 @@
         <div class="heroi__lado">
           <div class="heroi__midia midia">
             <picture>
-              <source media="(max-width: 899px)" type="image/webp" srcset="assets/img/heroi-natureza-celular.webp">
-              <source media="(max-width: 899px)" srcset="assets/img/heroi-natureza-celular.jpg">
-              <source type="image/webp" srcset="assets/img/heroi-natureza.webp">
-              <img src="assets/img/heroi-natureza.jpg" width="1110" height="1200" fetchpriority="high" alt="Mesinha de madeira clara com uma jarra de água, um copo e um vaso com galhos de eucalipto, junto a uma parede verde-sálvia iluminada pela janela">
-            </picture>
+  <source type="image/webp" media="(max-width: 899px)" srcset="assets/img/heroi-natureza-celular-480.webp 480w, assets/img/heroi-natureza-celular-960.webp 960w" sizes="100vw">
+  <source type="image/webp" srcset="assets/img/heroi-natureza-960.webp 960w" sizes="100vw">
+  <img src="assets/img/heroi-natureza-960.jpg" width="1110" height="1200" alt="Mesinha de madeira clara com uma jarra de água, um copo e um vaso com galhos de eucalipto, junto a uma parede verde-sálvia iluminada pela janela" decoding="async" fetchpriority="high">
+</picture>
           </div>
           <p class="identificacao">Psicóloga Elissandra de Oliveira <span class="nowrap">Melo · CRP 12/26857</span></p>
         </div>
@@ -166,9 +163,10 @@
       </div>
       <div class="sobre__midia midia">
         <picture>
-          <source type="image/webp" srcset="assets/img/sobre-elissandra.webp">
-          <img src="assets/img/sobre-elissandra.jpg" width="801" height="1001" loading="lazy" alt="Elissandra Melo, de casaco amarelo, sorrindo com as mãos apoiadas no queixo">
-        </picture>
+  <source type="image/webp" media="(max-width: 899px)" srcset="assets/img/sobre-elissandra-480.webp 480w, assets/img/sobre-elissandra-960.webp 960w" sizes="100vw">
+  <source type="image/webp" srcset="assets/img/sobre-elissandra-960.webp 960w" sizes="50vw">
+  <img src="assets/img/sobre-elissandra-960.jpg" width="801" height="1001" alt="Elissandra Melo, de casaco amarelo, sorrindo com as mãos apoiadas no queixo" decoding="async">
+</picture>
       </div>
     </div>
   </section>
@@ -307,9 +305,10 @@
       <div class="abordagem__grade">
         <div class="abordagem__midia midia">
           <picture>
-            <source type="image/webp" srcset="assets/img/abordagem-caderno.webp">
-            <img src="assets/img/abordagem-caderno.jpg" width="1200" height="1500" loading="lazy" alt="Caderno aberto com caneta sobre uma mesa clara, em luz quente de janela">
-          </picture>
+  <source type="image/webp" media="(max-width: 899px)" srcset="assets/img/abordagem-caderno-480.webp 480w, assets/img/abordagem-caderno-960.webp 960w" sizes="100vw">
+  <source type="image/webp" srcset="assets/img/abordagem-caderno-960.webp 960w" sizes="50vw">
+  <img src="assets/img/abordagem-caderno-960.jpg" width="1200" height="1500" alt="Caderno aberto com caneta sobre uma mesa clara, em luz quente de janela" decoding="async">
+</picture>
         </div>
         <ul class="abordagem__cartoes" role="list">
           <li class="cartao-abordagem">
@@ -351,9 +350,10 @@
         <li class="foto-card">
           <div class="foto-card__midia midia">
             <picture>
-              <source type="image/webp" srcset="assets/img/consultorio-sala.webp">
-              <img src="assets/img/consultorio-sala.jpg" width="760" height="950" loading="lazy" alt="Canto da sala de atendimento com prateleira, planta e poltrona cinza com almofada">
-            </picture>
+  <source type="image/webp" media="(max-width: 899px)" srcset="assets/img/consultorio-sala-480.webp 480w, assets/img/consultorio-sala-960.webp 960w" sizes="100vw">
+  <source type="image/webp" srcset="assets/img/consultorio-sala-960.webp 960w" sizes="50vw">
+  <img src="assets/img/consultorio-sala-960.jpg" width="760" height="950" alt="Canto da sala de atendimento com prateleira, planta e poltrona cinza com almofada" decoding="async" loading="lazy">
+</picture>
           </div>
           <span class="foto-card__selo">Trindade</span>
           <div class="foto-card__legenda"><h3>Sala de atendimento</h3><p>Luz de janela e poltronas</p></div>
@@ -361,27 +361,30 @@
         <li class="foto-card">
           <div class="foto-card__midia midia">
             <picture>
-              <source type="image/webp" srcset="assets/img/consultorio-espera.webp">
-              <img src="assets/img/consultorio-espera.jpg" width="760" height="950" loading="lazy" alt="Espera do consultório com sofá cinza e parede verde-sálvia">
-            </picture>
+  <source type="image/webp" media="(max-width: 899px)" srcset="assets/img/consultorio-espera-480.webp 480w, assets/img/consultorio-espera-960.webp 960w" sizes="100vw">
+  <source type="image/webp" srcset="assets/img/consultorio-espera-960.webp 960w" sizes="50vw">
+  <img src="assets/img/consultorio-espera-960.jpg" width="760" height="950" alt="Espera do consultório com sofá cinza e parede verde-sálvia" decoding="async" loading="lazy">
+</picture>
           </div>
           <div class="foto-card__legenda"><h3>Espera</h3><p>Sofá e água para quem chega</p></div>
         </li>
         <li class="foto-card">
           <div class="foto-card__midia midia">
             <picture>
-              <source type="image/webp" srcset="assets/img/consultorio-mesa.webp">
-              <img src="assets/img/consultorio-mesa.jpg" width="960" height="1200" loading="lazy" alt="Mesa de trabalho com cadeiras junto à janela do consultório">
-            </picture>
+  <source type="image/webp" media="(max-width: 899px)" srcset="assets/img/consultorio-mesa-480.webp 480w, assets/img/consultorio-mesa-960.webp 960w" sizes="100vw">
+  <source type="image/webp" srcset="assets/img/consultorio-mesa-960.webp 960w" sizes="50vw">
+  <img src="assets/img/consultorio-mesa-960.jpg" width="960" height="1200" alt="Mesa de trabalho com cadeiras junto à janela do consultório" decoding="async" loading="lazy">
+</picture>
           </div>
           <div class="foto-card__legenda"><h3>Mesa e janela</h3><p>Mesa de trabalho junto à janela</p></div>
         </li>
         <li class="foto-card">
           <div class="foto-card__midia midia">
             <picture>
-              <source type="image/webp" srcset="assets/img/consultorio-cafe.webp">
-              <img src="assets/img/consultorio-cafe.jpg" width="760" height="950" loading="lazy" alt="Aparador com garrafas de café, xícaras e flores na espera">
-            </picture>
+  <source type="image/webp" media="(max-width: 899px)" srcset="assets/img/consultorio-cafe-480.webp 480w, assets/img/consultorio-cafe-960.webp 960w" sizes="100vw">
+  <source type="image/webp" srcset="assets/img/consultorio-cafe-960.webp 960w" sizes="50vw">
+  <img src="assets/img/consultorio-cafe-960.jpg" width="760" height="950" alt="Aparador com garrafas de café, xícaras e flores na espera" decoding="async" loading="lazy">
+</picture>
           </div>
           <div class="foto-card__legenda"><h3>Café</h3><p>Para receber você com calma</p></div>
         </li>
@@ -390,9 +393,10 @@
         <div class="contato-card__pessoa">
           <div class="contato-card__avatar midia">
             <picture>
-              <source type="image/webp" srcset="assets/img/avatar-elissandra.webp">
-              <img src="assets/img/avatar-elissandra.jpg" width="400" height="400" loading="lazy" alt="Elissandra Melo no consultório">
-            </picture>
+  <source type="image/webp" media="(max-width: 899px)" srcset="assets/img/avatar-elissandra-480.webp 480w, assets/img/avatar-elissandra-960.webp 960w" sizes="100vw">
+  <source type="image/webp" srcset="assets/img/avatar-elissandra-960.webp 960w" sizes="50vw">
+  <img src="assets/img/avatar-elissandra-960.jpg" width="400" height="400" alt="Elissandra Melo no consultório" decoding="async" loading="lazy">
+</picture>
           </div>
           <div>
             <p class="contato-card__titulo">Fale direto comigo</p>
@@ -462,17 +466,19 @@
         </div>
         <div class="banner__midia midia">
           <picture>
-            <source type="image/webp" srcset="assets/img/onde-torre-flora.webp">
-            <img src="assets/img/onde-torre-flora.jpg" width="920" height="780" loading="lazy" alt="Fachada amarela da Torre Flora, no Max&amp;Flora Center, na Trindade">
-          </picture>
+  <source type="image/webp" media="(max-width: 899px)" srcset="assets/img/onde-torre-flora-480.webp 480w, assets/img/onde-torre-flora-960.webp 960w" sizes="100vw">
+  <source type="image/webp" srcset="assets/img/onde-torre-flora-960.webp 960w" sizes="50vw">
+  <img src="assets/img/onde-torre-flora-960.jpg" width="920" height="780" alt="Fachada amarela da Torre Flora, no Max&amp;Flora Center, na Trindade" decoding="async" loading="lazy">
+</picture>
         </div>
       </div>
       <div class="online">
         <div class="online__midia midia">
           <picture>
-            <source type="image/webp" srcset="assets/img/online-notebook.webp">
-            <img src="assets/img/online-notebook.jpg" width="1200" height="900" loading="lazy" alt="Notebook aberto e caneca sobre uma mesa clara">
-          </picture>
+  <source type="image/webp" media="(max-width: 899px)" srcset="assets/img/online-notebook-480.webp 480w, assets/img/online-notebook-960.webp 960w" sizes="100vw">
+  <source type="image/webp" srcset="assets/img/online-notebook-960.webp 960w" sizes="50vw">
+  <img src="assets/img/online-notebook-960.jpg" width="1200" height="900" alt="Notebook aberto e caneca sobre uma mesa clara" decoding="async" loading="lazy">
+</picture>
         </div>
         <div class="online__texto">
           <p class="rotulo"><span class="nowrap">On-line</span></p>
