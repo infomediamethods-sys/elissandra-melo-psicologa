@@ -381,7 +381,8 @@ p .link, li .link { min-height: var(--toque-min); }
   .heroi__opcao { font-size: 0.9375rem; }
   .heroi__apoio { display: none; }
   /* rótulo menor no celular (pedido do Armin, 13/10): mesmo tamanho dos selos */
-  .heroi__rotulo { font-size: 0.6875rem; letter-spacing: 0.14em; gap: var(--space-2); }
+  /* 2ª redução (19/10): 10px e tracking 0.08em, pedido do Armin ("diminuir bem") */
+  .heroi__rotulo { font-size: 0.625rem; letter-spacing: 0.08em; gap: var(--space-2); }
 }
 .anotacao {
   display: inline-flex; align-items: flex-start; gap: var(--space-2);
