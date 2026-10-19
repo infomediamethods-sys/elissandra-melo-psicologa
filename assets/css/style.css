@@ -409,6 +409,18 @@ p .link, li .link { min-height: var(--toque-min); }
   letter-spacing: 0.12em; text-transform: uppercase; line-height: 1.5;
   color: var(--texto);
 }
+/* Celular/tablet (19/10/2026, pedido do Armin): a imagem entra logo abaixo da headline.
+   Texto e lado "se abrem" na grade (display: contents) e a ordem vira: título → foto → frases → anotação →
+   botões → linha do CRP. Ritmo: título→foto 32 · foto→frases 32 · entre frases 16 · frases→anotação 24 ·
+   anotação→botões 48 · botões→CRP 32. */
+@media (max-width: 899px) {
+  .heroi__grade { gap: 0; justify-items: start; }
+  .heroi__texto, .heroi__lado { display: contents; }
+  .heroi__titulo { order: 0; }
+  .heroi__midia { order: 1; margin-block-start: var(--space-6); }
+  .heroi__frases[role="list"], .heroi .anotacao, .heroi__apoio, .heroi .acoes { order: 2; }
+  .heroi__lado .identificacao { order: 3; margin-block-start: var(--space-6); }
+}
 @media (min-width: 900px) {
   .heroi { padding-block: var(--space-10) var(--space-8); }
   .heroi__grade {
